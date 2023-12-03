@@ -11,7 +11,7 @@ class SpotifyDataAnalyser:
         self.default_path = 'data/streaming'
         self.extended_path = 'data/streaming_extended'
         self.dataset_path = Path(self.extended_path) if self.is_extended_data else Path(self.default_path)
-
+      
         self.datasets_count = None
         if not self.is_extended_data:
             self.datasets_count = prompter.prompt_for_dataset_count()
@@ -36,7 +36,7 @@ class Prompter:
         self.datasets_count = None
         self.results_amount = None
         self.max_results_amount = 100
-
+        
     def prompt(self, prompt_message, error_message, condition):
         print(prompt_message)
         while True:
